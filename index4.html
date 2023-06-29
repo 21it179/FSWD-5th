@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+   function findMinMaxSalary(salaries) 
+   {
+    if (sal.length === 0) 
+    {
+      return null; // Return null if the array is empty
+    }
+    var minSalary = sal[0];
+    var maxSalary = sal[0];
+    for (var i = 1; i < sal.length; i++) 
+    {
+      if (sal[i] < minSalary) 
+      {
+        minSalary = sal[i];
+      }
+      if (sal[i] > maxSalary) 
+      {
+        maxSalary = sal[i];
+      }
+    }
+    return{
+      minSalary: minSalary,
+      maxSalary: maxSalary
+    };
+  }
+  
+  var salaryArray = [53647, 54637, 90890, 43536, 6780];
+  var result = findMinMaxSalary(salaryArray);
+  
+  console.log("Minimum Salary:", result.minSalary);
+  console.log("Maximum Salary:", result.maxSalary);
+</script>
+</body>
+</html>
